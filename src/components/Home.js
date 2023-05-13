@@ -63,9 +63,11 @@ export const Home = () => {
   return (
     < >
           <Navbar/>
-      <h1 className="intro">Hello welcome to the Event. Happy coding!!</h1>
       <h1>Home</h1>
       <div className="carousel-container">
+
+      {/* Here the carousal must show the given images in a slideshow manner you can use any method to complete the effect  */}
+
       <Slider ref={sliderRef} {...settings}>
         {images.map((image, index) => (
           <Card key={index} src={image.src} />

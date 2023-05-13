@@ -15,18 +15,18 @@ function App() {
   return (
     <>
       <Router>
+          <Route exact path="/Register">
+            <Register/>
+          </Route>
+          <Route exact path="/login">
+            <Login/>
+          </Route>
 
         <Navbar />
         <br /> <br />
         <Switch>
           <Route exact path="/">
             <Home />
-          </Route>
-          <Route exact path="/Register">
-            <Register/>
-          </Route>
-          <Route exact path="/login">
-            <Login/>
           </Route>
           <Route exact path="/about">
             <About/>

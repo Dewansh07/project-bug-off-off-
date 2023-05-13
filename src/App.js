@@ -8,6 +8,8 @@ import { Trainers } from './components/Trainers';
 import { Blogs } from './components/Blogs';
 import { Packages } from './components/packages';
 import { Plans } from './components/Plans';
+import Register from './components/login&Register/register';
+import Login from './components/login&Register/login';
 
 function App() {
   return (
@@ -19,6 +21,12 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Home />
+          </Route>
+          <Route exact path="/Register">
+            <Register/>
+          </Route>
+          <Route exact path="/login">
+            <Login/>
           </Route>
           <Route exact path="/about">
             <About/>

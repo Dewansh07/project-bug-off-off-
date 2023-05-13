@@ -1,13 +1,13 @@
 import './App.css';
-import { Navbar } from './components/Navbar';
+import { Navbar } from './Navbar/Navbar';
 import { BrowserRouter as Router, Switch, Route, } from "react-router-dom";
 import { Home } from './components/Home';
 import { Features } from './components/Features';
 import { Trainers } from './components/Trainers';
-import { Packages } from './components/packages';
 import { Plans } from './components/Plans';
 import Register from './components/login&Register/register';
 import Login from './components/login&Register/login';
+import { Packages } from './components/packages/packages';
 
 function App() {
   return (

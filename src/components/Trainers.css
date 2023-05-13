@@ -1,0 +1,80 @@
+.expert-heading{
+    text-align: center;
+    font-size: 40px;
+    color: red;
+    font-weight: bolder;
+
+}
+.hr1{
+    margin-top: 3%;
+}
+.intro-trainers{
+    padding: 5%;
+}
+.trainers .box-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(29rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .trainers .box-container .box {
+    height: 30rem;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .trainers .box-container .box:hover .content {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  
+  .trainers .box-container .box img {
+    /* height: 200px; */
+    /* width: 200px; */
+    height: 90%;
+    width: 100%;
+    /* -o-object-fit: cover; */
+       /* object-fit: cover; */
+    
+  }
+  
+  .trainers .box-container .box .content {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    background: #111;
+    padding: 2rem;
+    font-size: 10px;
+    -webkit-transform: translateY(6.5rem);
+            transform: translateY(6.5rem);
+  }
+  
+  .trainers .box-container .box .content span {
+    font-size: 1.2rem;
+    color: #f00;
+  }
+  
+  .trainers .box-container .box .content h3 {
+    font-size: 1.1rem;
+    color: #fff;
+    padding-top: .5rem;
+  }
+  
+  .trainers .box-container .box .content .share {
+    padding-top: 2rem;
+    margin-top: 1.5rem;
+    border-top: 0.1rem solid #aaa;
+  }
+  
+  .trainers .box-container .box .content .share .socials-icon {
+    font-size: 2rem;
+    color: #fff;
+    margin-right: 1.5rem;
+  }
+  
+  .trainers .box-container .box .content .share .socials-icon:hover {
+    color: #f00;
+  }

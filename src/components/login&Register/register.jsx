@@ -37,7 +37,7 @@ function Register (){
                             email,
                             photoURL: downloadURL,
                             phoneNumber:number,
-                            UserPlans:[]
+                            cart:[]
                         });
                     }
                     catch(err){

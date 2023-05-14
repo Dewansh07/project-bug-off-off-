@@ -44,7 +44,7 @@ export const Products = () => {
               console.log('success')
             })
             // navigate("/plans")
-            alert(`Registered for ${product.Product_name}`)
+            alert(`Added ${product.Product_name} to cart`)
         } catch (err) {
             console.log(err)
         }

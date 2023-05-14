@@ -61,7 +61,7 @@ export const Home = () => {
 
 
   return (
-    <div className='plan' style={{ backgroundColor: "black" }}>
+    <div className='home'>
       <Navbar/>
       <h1>Home</h1>
       <div className="carousel-container">
@@ -91,7 +91,3 @@ export const Home = () => {
   );
 
 }
-
-
-
-export default Home;

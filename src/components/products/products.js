@@ -19,7 +19,7 @@ import Image6 from '../images/I6.jpg';
 
 
 export const Products = () => {
-  const [products,setProducts] = useState([{Product_id:'id123',Product_price:5000,Product_name:'Shirt1',Product_img:`${Image3}`,Product_desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',Product_company:'Puma'},{Product_id:'id223',Product_price:6000,Product_img:`${Image2}`,Product_name:'Shirt2',Product_desc:'"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',Product_company:'Puma'},{Product_id:'id321',Product_price:7000,Product_img:`${Image1}`,Product_name:'Shirt3',Product_desc:'"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',Product_company:'Puma'},{Product_id:'id123',Product_price:8000,Product_name:'Jogger',Product_img:`${Image4}`,Product_desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',Product_company:'Puma'}])
+  const [products,setProducts] = useState([{Product_id:'id123',Product_price: 5000,Product_price:5000,Product_name:'Shirt1',Product_img:`${Image3}`,Product_desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',Product_company:'Puma'},{Product_id:'id223',Product_price: 5000,Product_price:6000,Product_img:`${Image2}`,Product_name:'Shirt2',Product_desc:'"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',Product_company:'Puma'},{Product_id:'id321',Product_price: 5000,Product_price:7000,Product_img:`${Image1}`,Product_name:'Shirt3',Product_desc:'"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',Product_company:'Puma'},{Product_id:'id123',Product_price: 5000,Product_price:8000,Product_name:'Jogger',Product_img:`${Image4}`,Product_desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',Product_company:'Puma'}])
   const usersRef = collection(db, "users");
   const {currentUser} = useContext(Authcontext)
   const [vis,setVis] = useState('hidden')
@@ -44,44 +44,44 @@ export const Products = () => {
               console.log('success')
             })
             // navigate("/plans")
-            alert(`Registered for ${product.Product_name}`)
+            alert(`Added ${product.Product_name} to cart`)
         } catch (err) {
             console.log(err)
         }
 
   }
+  
   return (
     <div className='products'>
-      <Navbar/>
-      <div className='popup' style={{visibility:`${vis}`}} onClick={()=>setVis('hidden')}>
-        <div className='popupWindow'>
-              <div className='content'>
-                  <div>
-                    <div className='product-name'>{currentProduct.Product_name}</div>
-                    <div className='product-desc'>{currentProduct.desc}</div>
-                    <div className='company'>{currentProduct.Product_company}</div>
-                  </div>
-                <button onClick={()=>{addPlan(currentProduct)}}>Add To Cart</button>
-              </div>
+  <Navbar/>
+  <div className='popup' style={{visibility:`${vis}`}} onClick={()=>setVis('hidden')}>
+    <div className='popupWindow'>
+      <div className='content'>
+        <div>
+          <div className='product-name'>{currentProduct.Product_name}</div>
+          <div className='product-desc'>{currentProduct.desc}</div>
+          <div className='company'>{currentProduct.Product_company}</div>
         </div>
-      </div>
-      <div className='products-container'>
-        {
-          products.map((product)=>(
-            <div className='product' onClick={()=>setVis('visible')}>
-              <img src={product.Product_img}></img>
-              <div className='content'>
-                  <div>
-                    <div className='product-name'>{product.Product_name}</div>
-                    {/* <div className='plan-desc'>{plan.desc}</div> */}
-                    <div className='company'>{product.Product_company}</div>
-                  </div>
-                <button className='btn' onClick={()=>{addPlan(product)}}>Add To Cart</button>
-              </div>
-            </div>
-          ))
-        }
+        <button onClick={()=>{addPlan(currentProduct)}}>Add To Cart</button>
       </div>
     </div>
+  </div>
+  <div className='products-container'>
+    {
+      products.map((product)=>(
+        <div className='product' onClick={()=>setVis('visible')}>
+          <img src={product.Product_img}></img>
+          <div className='content'>
+            <div>
+              <div className='product-name'>{product.Product_name}</div>
+              <div className='company'>{product.Product_company}</div>
+            </div>
+            <button className='btn' onClick={()=>{addPlan(product)}}>Add To Cart</button>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>
   )
 }

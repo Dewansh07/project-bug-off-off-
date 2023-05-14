@@ -14,24 +14,22 @@ export const Cart = () => {
   const [products, setProducts] = useState([{ Product_id: 'id123', Product_price: 5000, Product_name: 'Printed Floral Shirt',Product_qty:1, Product_img: `${Image3}`, Product_desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', Product_company: 'Adidas' }, { Product_id: 'id223', Product_price: 9000,Product_qty:2, Product_img: `${Image2}`, Product_name: 'Denim Blue Shirt', Product_desc: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', Product_company: 'Puma' }])
   const eventsRef = collection(db, "events");
   const { currentUser } = useContext(Authcontext)
-  const FetchAllUserPlans = async () => {
-    const q1 = query(eventsRef, where("uid", "==", currentUser.uid))
-    const temp1 = []
-    const querySnapShot1 = await getDocs(q1)
-    try {
-      querySnapShot1.forEach((doc) => {
-        temp1.push(doc.data())
-      })
-      // setPlan(temp1)
-    } catch (err) {
-      console.log(err)
-    }
-  }
-  useEffect(() => {
-
-    // FetchAllUserPlans()
-
-  })
+  // const FetchAllUserProducts = async () => {
+  //   const q1 = query(userRef, where("uid", "==", currentUser.uid))
+  //   const temp1 = []
+  //   const querySnapShot1 = await getDocs(q1)
+  //   try {
+  //     querySnapShot1.forEach((doc) => {
+  //       temp1.push(doc.data())
+  //     })
+  //     // setCart(temp1[0].cart)
+  //   } catch (err) {
+  //     console.log(err)
+  //   }
+  // }
+  // useEffect(() => {
+  //   FetchAllUserProducts()
+  // })
   return (
     <div className='plan'>
       <Navbar />

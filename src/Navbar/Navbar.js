@@ -19,9 +19,9 @@ export const Navbar = () => {
                 <nav className="navbar">
                     
                     <Link to="/">Home</Link>
-                    <Link to="/Packages">Products</Link>
-                    <Link to="/trainers">support</Link>
-                    <Link to="/plans">Cart</Link>
+                    <Link to="/Products">Products</Link>
+                    <Link to="/support">support</Link>
+                    <Link to="/cart">Cart</Link>
 
                     {/* <img src={currentUser.photoURL}></img> */}
                     {/* The above img tag must contain the profile photo that the user uploaded while they logged in */}

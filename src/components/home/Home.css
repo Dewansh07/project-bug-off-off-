@@ -1,5 +1,18 @@
+.home{
+  background-color: black;
+  
+}
+
 .carousel {
   overflow: hidden;
+}
+.content{
+  background-color: red;
+  width: 90%;
+  padding: 2%;
+  margin-top: 5%;
+  margin-left: 3%;
+  border-radius: 15px;
 }
 
 .inner {

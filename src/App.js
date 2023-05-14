@@ -1,10 +1,9 @@
 import './App.css';
 import { Navbar } from './Navbar/Navbar';
 import { BrowserRouter as Router, Switch, Route, } from "react-router-dom";
-import { Home } from './components/Home';
-import { Features } from './components/Features';
-import { Trainers } from './components/Trainers';
-import { Plans } from './components/Plans';
+import { Home } from './components/home/Home';
+import { Trainers } from './components/trainers/Trainers';
+import { Plans } from './components/all_plans/Plans';
 import Register from './components/login&Register/register';
 import Login from './components/login&Register/login';
 import { Packages } from './components/packages/packages';
@@ -23,9 +22,6 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Home />
-          </Route>
-          <Route exact path="/features">
-            <Features/>
           </Route>
           <Route exact path="/trainers">
             <Trainers/>

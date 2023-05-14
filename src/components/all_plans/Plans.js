@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { Navbar } from '../Navbar/Navbar'
-import { Authcontext } from '../contextProvider';
-import { auth } from "../firebase_config";
+import { Navbar } from '../../Navbar/Navbar'
+import { Authcontext } from '../../contextProvider';
+import { auth } from "../../firebase_config";
 import { collection, query, updateDoc, where } from "firebase/firestore";
-import { db } from '../firebase_config';
+import { db } from '../../firebase_config';
 import { getDocs, doc } from "firebase/firestore";
 
 export const Plans = () => {

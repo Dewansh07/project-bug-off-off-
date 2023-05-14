@@ -1,85 +1,56 @@
-.trainers{
-  background-color: rgb(71, 70, 70);
-  
+.form-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 100px;
 }
-.expert-heading{
-    text-align: center;
-    font-size: 40px;
-    color: red;
-    font-weight: bolder;
 
+.form-label {
+  font-weight: bold;
+  margin-bottom: 5px;
 }
-.hr1{
-    margin-top: 3%;
+
+.form-input {
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+  line-height: 1.5;
 }
-.intro-trainers{
-    color:rgb(42, 208, 67);
-    padding: 5%;
+
+.form-input:focus {
+  outline: none;
+  border-color: #4d90fe;
+  box-shadow: 0 0 5px #4d90fe;
 }
-.trainers .box-container {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (minmax(29rem, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
-    gap: 1.5rem;
-  }
-  
-  .trainers .box-container .box {
-    height: 30rem;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .trainers .box-container .box:hover .content {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  
-  .trainers .box-container .box img {
-    /* height: 200px; */
-    /* width: 200px; */
-    height: 90%;
-    width: 100%;
-    /* -o-object-fit: cover; */
-       /* object-fit: cover; */
-    
-  }
-  
-  .trainers .box-container .box .content {
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    right: 0;
-    background: #111;
-    padding: 2rem;
-    font-size: 10px;
-    -webkit-transform: translateY(6.5rem);
-            transform: translateY(6.5rem);
-  }
-  
-  .trainers .box-container .box .content span {
-    font-size: 1.2rem;
-    color: #f00;
-  }
-  
-  .trainers .box-container .box .content h3 {
-    font-size: 1.1rem;
-    color: #fff;
-    padding-top: .5rem;
-  }
-  
-  .trainers .box-container .box .content .share {
-    padding-top: 2rem;
-    margin-top: 1.5rem;
-    border-top: 0.1rem solid #aaa;
-  }
-  
-  .trainers .box-container .box .content .share .socials-icon {
-    font-size: 2rem;
-    color: #fff;
-    margin-right: 1.5rem;
-  }
-  
-  .trainers .box-container .box .content .share .socials-icon:hover {
-    color: #f00;
-  }
+
+.form-textarea {
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+  line-height: 1.5;
+  height: 100px;
+}
+
+.form-submit {
+  padding: 10px 20px;
+  background-color: #4d90fe;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form-submit:hover {
+  background-color: #357ae8;
+}
+
+.form-submit:focus {
+  outline: none;
+  box-shadow: 0 0 5px #357ae8;
+}

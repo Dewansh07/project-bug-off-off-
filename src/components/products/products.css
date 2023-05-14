@@ -8,16 +8,17 @@
     display: flex;
     flex-direction: row;
     min-height: 100%;
-
-}
-.popup{
+  }
+  
+  .popup{
     position: fixed;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.535);
     z-index: 2;
-}
-.popupWindow{
+  }
+  
+  .popupWindow{
     background-color: aliceblue;
     width: 60%;
     height: 70%;
@@ -25,56 +26,69 @@
     top:8%;
     left: 20%;
     border-radius: 15px;
-}
-.products-container{
+  }
+  
+  .products-container{
     display: flex;
     max-height: max-content;
-}
-.product{
-    background-color:darkgray;
-    width: 30%;
-    height: fit-content;
+  }
+  
+  .product{
+    position: relative; 
+    background-color: white;
+    width: 35%;
+    height: 450px;
     margin-left: 3%;
     padding: 2%;
     margin-top: 2%;
-    border-radius: 20px;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
-    color: aliceblue;
-}
-.product img{
+    color: black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .product img{
     width: 90%;
     margin-left: 5%;
     height: 80%;
     justify-self: center;
     margin-right: 2%;
-}
-.product .content{
+  }
+  
+  .product .content{
     width: 80%;
+    position: relative; 
     margin-right: 2%;
     justify-self: center;
-    text-justify: center;
+    text-align: center;
     display: flex;
-
-}
-.product .content .plan-name{
-    font-size: 25px;
-}
-.product .content .plan-desc{
-    font-size: 15px;
-}
-.product .content .trainer{
-    font-size: 15px;
-    color: red;
-}
-.content .btn{
-    background-color: red;
-    color: black;
+  }
+  
+  .product .content .product-name{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .product .content .company{
+    font-size: 14px;
+    color: gray;
+  }
+  
+  .content .btn{
+    background-color: orange;
+    color: white;
     border-radius: 20px;
     width: fit-content;
-    margin-left: 45%;
+    margin-left: auto;
+    margin-right: auto;
     cursor: pointer;
-    font-size: 20px;
-    min-width: 25%;
-
-}
+    font-size: 16px;
+    padding: 8px 16px;
+    margin-top: 8px;
+     position: absolute; /* Change position to absolute */
+  bottom: 8px; /* Adjust bottom spacing */
+  right: 8px; 
+  }
+  

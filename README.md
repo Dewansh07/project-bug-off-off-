@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+Hey contestant we welcome to you our event BugOff!!! here are some basic instructions and guidelines to follow during the event.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1)The given website consists of many UI bugs white-spaces, Irregular sizes of components etc which we expect you to solve and improve upon.
+2)The based template of the website consists of a components folder within which there are files that consists of the data ou can start with. Each folder within also consists of its own css file which has been linked. 
+3)outside the components file there are mainly 2 important files.
+    a)contextProvider file
+        which as the name suggests is the file that consists of the state within which the user information is stored and using useContext this information is passed onto all the child components
+    b)firebase_config file
+        This file consists of the firebase SDK and other important firebase functions which are required for the website. You can copy paste your SDK within this file.
 
-## Available Scripts
+4)Functionality.
+    This is website which Aims to provide its users with several workout plans. All the plans that the website offers provided by the different trainers should be  available on the pricing. We expect you to create a collection within firebase consisting of the attributes given within the 'plans' state inside the prices.js file
+    and fetch these plans and display it accordingly
 
-In the project directory, you can run:
+    Hence when the user clicks on the add plan button it must be added to the user plans list within the user collection that was generated during the registration process
+    You must also try and incorporate the ability to delete these plans and add other features upon this basic functionality of the website
 
-### `npm start`
+5)You can incorporate other features and Alter the UI to make it aesthetically pleasing but we expect the website to have as less console,UI errors etc.. as possible
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to approach us in case of any confusion or problems regarding the instructions.
+All the very Best.

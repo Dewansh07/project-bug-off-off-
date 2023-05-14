@@ -37,6 +37,7 @@ function Register (){
                             email,
                             photoURL: downloadURL,
                             phoneNumber:number,
+                            UserPlans:[]
                         });
                     }
                     catch(err){

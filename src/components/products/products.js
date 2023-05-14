@@ -23,6 +23,9 @@ export const Products = () => {
   const usersRef = collection(db, "users");
   const {currentUser} = useContext(Authcontext)
   const [vis,setVis] = useState('hidden')
+
+  // fetch actual data based on the given format from Firebase from a products collection
+  
   const [currentProduct,setCp] = useState({Product_id:'id123',Product_name:'Plan-1',Product_desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",Product_company:'Trianer-1'})
   // const navigate = useNavigate()
 

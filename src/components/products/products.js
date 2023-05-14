@@ -50,38 +50,38 @@ export const Products = () => {
         }
 
   }
+  
   return (
     <div className='products'>
-      <Navbar/>
-      <div className='popup' style={{visibility:`${vis}`}} onClick={()=>setVis('hidden')}>
-        <div className='popupWindow'>
-              <div className='content'>
-                  <div>
-                    <div className='product-name'>{currentProduct.Product_name}</div>
-                    <div className='product-desc'>{currentProduct.desc}</div>
-                    <div className='company'>{currentProduct.Product_company}</div>
-                  </div>
-                <button onClick={()=>{addPlan(currentProduct)}}>Add To Cart</button>
-              </div>
+  <Navbar/>
+  <div className='popup' style={{visibility:`${vis}`}} onClick={()=>setVis('hidden')}>
+    <div className='popupWindow'>
+      <div className='content'>
+        <div>
+          <div className='product-name'>{currentProduct.Product_name}</div>
+          <div className='product-desc'>{currentProduct.desc}</div>
+          <div className='company'>{currentProduct.Product_company}</div>
         </div>
-      </div>
-      <div className='products-container'>
-        {
-          products.map((product)=>(
-            <div className='product' onClick={()=>setVis('visible')}>
-              <img src={product.Product_img}></img>
-              <div className='content'>
-                  <div>
-                    <div className='product-name'>{product.Product_name}</div>
-                    {/* <div className='plan-desc'>{plan.desc}</div> */}
-                    <div className='company'>{product.Product_company}</div>
-                  </div>
-                <button className='btn' onClick={()=>{addPlan(product)}}>Add To Cart</button>
-              </div>
-            </div>
-          ))
-        }
+        <button onClick={()=>{addPlan(currentProduct)}}>Add To Cart</button>
       </div>
     </div>
+  </div>
+  <div className='products-container'>
+    {
+      products.map((product)=>(
+        <div className='product' onClick={()=>setVis('visible')}>
+          <img src={product.Product_img}></img>
+          <div className='content'>
+            <div>
+              <div className='product-name'>{product.Product_name}</div>
+              <div className='company'>{product.Product_company}</div>
+            </div>
+            <button className='btn' onClick={()=>{addPlan(product)}}>Add To Cart</button>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>
   )
 }

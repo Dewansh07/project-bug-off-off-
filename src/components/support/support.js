@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './support.css';
-
+import { Navbar } from '../../Navbar/Navbar';
 function Support() {
   const [productDetails, setProductDetails] = useState('');
   const [errorDescription, setErrorDescription] = useState('');
@@ -18,6 +18,7 @@ function Support() {
 
   return (
     <div>
+      <Navbar />
       <h2>Contact Support</h2>
       <form onSubmit={handleSubmit}>
         <label>

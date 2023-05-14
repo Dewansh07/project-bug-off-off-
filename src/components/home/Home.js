@@ -61,7 +61,7 @@ export const Home = () => {
 
 
   return (
-    <div className='home'>
+    <div className='plan' style={{ backgroundColor: "black" }}>
       <Navbar/>
       <h1>Home</h1>
       <div className="carousel-container">

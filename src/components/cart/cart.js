@@ -11,18 +11,18 @@ import Image2 from '../images/I2.jpg';
 import Image3 from '../images/I3.jpg';
 import Image4 from '../images/I4.webp';
 export const Cart = () => {
-  const [products, setProducts] = useState([{ Product_id: 'id123', Product_price: 5000, Product_name: 'Shirt1',Product_qty:1, Product_img: `${Image3}`, Product_desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', Product_company: 'Puma' }, { Product_id: 'id223', Product_price: 9000,Product_qty:2, Product_img: `${Image2}`, Product_name: 'Shirt2', Product_desc: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', Product_company: 'Puma' }])
-  const eventsRef = collection(db, "events");
+  const [cart, setCart] = useState([{ Product_id: 'id123', Product_price: 5000, Product_name: 'Shirt1',Product_qty:1, Product_img: `${Image3}`, Product_desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', Product_company: 'Puma' }, { Product_id: 'id223', Product_price: 9000,Product_qty:2, Product_img: `${Image2}`, Product_name: 'Shirt2', Product_desc: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', Product_company: 'Puma' }])
+  const userRef = collection(db, "user");
   const { currentUser } = useContext(Authcontext)
   const FetchAllUserPlans = async () => {
-    const q1 = query(eventsRef, where("uid", "==", currentUser.uid))
+    const q1 = query(userRef, where("uid", "==", currentUser.uid))
     const temp1 = []
     const querySnapShot1 = await getDocs(q1)
     try {
       querySnapShot1.forEach((doc) => {
         temp1.push(doc.data())
       })
-      // setPlan(temp1)
+      setCart(temp1[0].cart)
     } catch (err) {
       console.log(err)
     }
@@ -43,7 +43,7 @@ export const Cart = () => {
 
             <div className='products-container'>
               {
-                products.map((product) => (
+                cart.map((product) => (
                   <div className='product'>
                     <img src={product.Product_img}></img>
                     <div className='content'>

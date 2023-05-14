@@ -80,7 +80,7 @@ export const Home = () => {
           <h3>
               Welcome to our online clothing store! We offer a wide range of high-quality and fashionable clothing for men, women, and children. Our collection includes the latest trends and styles from top brands at affordable prices. Whether you're looking for casual wear, formal attire, or accessories to complete your outfit, we have everything you need to look your best. Shop now and experience the convenience of online shopping with fast and reliable delivery.
           </h3>
-          <button className='btn'>Explore</button>
+          <button className='btn1'>Explore</button>
       </div>
     </div>
     

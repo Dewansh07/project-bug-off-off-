@@ -5,7 +5,7 @@ import { auth } from "../../firebase_config";
 import { collection, query, updateDoc, where } from "firebase/firestore";
 import { db } from '../../firebase_config';
 import { getDocs, doc } from "firebase/firestore";
-
+import "./plans.css"
 export const Plans = () => {
   const [plan,setPlan] = useState([{name:'Plan-1',desc:'"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',trainer:'Trianer-1'}])
   const eventsRef = collection(db, "events");
@@ -30,7 +30,7 @@ export const Plans = () => {
 
   })
   return (
-    <>
+    <div className='plan'>
       <Navbar/>
       <div className='plans'>
         {
@@ -45,6 +45,6 @@ export const Plans = () => {
           ))
         }
       </div>
-    </>
+    </div>
   )
 }

@@ -58,7 +58,7 @@ export const Trainers = () => {
     },
   ];
   return (
-    <>
+    <div className='trainers'>
       <Navbar />
       <hr className='hr1' /> <h1 className='expert-heading'>Meet Our Expert Trainers</h1> <hr />
 
@@ -93,6 +93,6 @@ export const Trainers = () => {
           })}
         </div>
       </div>
-    </>
+    </div>
   )
 }

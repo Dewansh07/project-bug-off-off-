@@ -1,4 +1,4 @@
-Hey contestant we welcome to you our event BugOff!!! here are some basic instructions and guidelines to follow during the event.
+Hey contestant we welcome you to our event BugOff!!! here are some basic instructions and guidelines to follow during the event.
 
 1)The given website consists of many UI bugs white-spaces, Irregular sizes of components etc which we expect you to solve and improve upon.
 2)The based template of the website consists of a components folder within which there are files that consists of the data ou can start with. Each folder within also consists of its own css file which has been linked. 

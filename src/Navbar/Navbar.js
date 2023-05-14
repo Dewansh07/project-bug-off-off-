@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
-import { auth } from "../../firebase_config";
+import { auth } from '../firebase_config';
 import { collection, query, updateDoc, where } from "firebase/firestore";
-import { db } from '../../firebase_config';
+import { db } from '../firebase_config';
 import "./Navbar.css";
 import { Link} from "react-router-dom";
 import { getDocs, doc } from "firebase/firestore";
@@ -18,7 +18,7 @@ export const Navbar = () => {
     const userRef = collection(db, "user");
     const [vis,setVis] = useState('hidden')
 
-    const Search = async ()=>{
+    const HandleSearch = async ()=>{
         const q1 = query(userRef, where("product_name", "==", search))
         const temp1 = []
         const querySnapShot1 = await getDocs(q1)
@@ -26,13 +26,13 @@ export const Navbar = () => {
           querySnapShot1.forEach((doc) => {
             temp1.push(doc.data())
           })
-          setSP(temp1)
+          setSP(temp1[0])
         } catch (err) {
           console.log(err)
         }
     }
 
-    const addPlan = async (product) =>{
+    const addProduct = async (product) =>{
 
         // code to add the selected item onto the users database collection which consists of the cart
             const q = query(userRef, where("uid", "==", `${currentUser.uid}`))
@@ -67,7 +67,7 @@ export const Navbar = () => {
                             <div className='product-desc'>{search_Product.desc}</div>
                             <div className='company'>{search_Product.Product_company}</div>
                         </div>
-                        <button onClick={()=>{addPlan(currentProduct)}}>Add To Cart</button>
+                        <button onClick={()=>{addProduct(search_Product)}}>Add To Cart</button>
                     </div>
                 </div>
             </div>

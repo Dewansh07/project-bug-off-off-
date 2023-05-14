@@ -1,3 +1,21 @@
-body {
-    background-color: black;
-  }
+.carttt{
+  display: flex;
+  margin-right: 5%;
+}
+.checkout{
+  width: 500px;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: right;
+  /* box-shadow: 0px 0px 2px 2px #cecece; */
+  /* height: 120px; */
+}
+.pluss,.minuss{
+  color: black;
+  margin: 5px ;
+  cursor: pointer;
+}
+.product-qty{
+  color: black;
+  display: inline;
+}

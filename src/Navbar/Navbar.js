@@ -27,6 +27,7 @@ export const Navbar = () => {
             temp1.push(doc.data())
           })
           setSP(temp1[0])
+          setVis('visible')
         } catch (err) {
           console.log(err)
         }

@@ -1,4 +1,4 @@
-import './packages.css'
+import './products.css'
 import user from '../images/user.png'
 import { useContext, useEffect, useState } from "react";
 import { signOut } from "firebase/auth";
@@ -10,7 +10,7 @@ import { Link} from "react-router-dom";
 import { Authcontext } from '../../contextProvider';
 import { Navbar } from '../../Navbar/Navbar';
 
-export const Packages = () => {
+export const Products = () => {
   const [plan,setPlan] = useState([{id:'id123',name:'Plan-1',desc:'"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',trainer:'Trianer-1'},{id:'id223',name:'Plan-2',desc:'"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',trainer:'Trianer-2'},{id:'id321',name:'Plan-1',desc:'"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',trainer:'Trianer-1'}])
   const usersRef = collection(db, "users");
   const {currentUser} = useContext(Authcontext)

@@ -1,9 +1,9 @@
 import React from 'react'
-import "./Trainers.css"
+import "./support.css"
 import { Navbar } from '../../Navbar/Navbar';
 
 
-export const Trainers = () => {
+export const Support = () => {
   const Trainers = [{
       "expertise": "Expert Trainer",
       "name": "John Deo",

@@ -11,7 +11,7 @@ import Image2 from '../images/I2.jpg';
 import Image3 from '../images/I3.jpg';
 import Image4 from '../images/I4.webp';
 export const Cart = () => {
-  const [products, setProducts] = useState([{ Product_id: 'id123', Product_price: 5000, Product_name: 'Shirt1',Product_qty:1, Product_img: `${Image3}`, Product_desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', Product_company: 'Puma' }, { Product_id: 'id223', Product_price: 9000,Product_qty:2, Product_img: `${Image2}`, Product_name: 'Shirt2', Product_desc: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', Product_company: 'Puma' }])
+  const [products, setProducts] = useState([{ Product_id: 'id123', Product_price: 5000, Product_name: 'Printed Floral Shirt',Product_qty:1, Product_img: `${Image3}`, Product_desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', Product_company: 'Adidas' }, { Product_id: 'id223', Product_price: 9000,Product_qty:2, Product_img: `${Image2}`, Product_name: 'Denim Blue Shirt', Product_desc: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', Product_company: 'Puma' }])
   const eventsRef = collection(db, "events");
   const { currentUser } = useContext(Authcontext)
   const FetchAllUserPlans = async () => {
@@ -38,26 +38,27 @@ export const Cart = () => {
       <div className='plans'>
         {
           <>
-            <h1>My Cart</h1>
+            <h1 className='cart-head'>My Cart</h1>
             <div className="carttt">
 
             <div className='products-container'>
               {
                 products.map((product) => (
-                  <div className='product'>
+                  <div className='product-cart'>
                     <img src={product.Product_img}></img>
                     <div className='content'>
-                      <div>
+                      <div className='cart-details'>
                         <div className='product-name'>{product.Product_name}</div>
                         {/* <div className='plan-desc'>{plan.desc}</div> */}
                         <div className='company'>{product.Product_company}</div>
+                        Quantity :
                       <i className="fa-solid fa-plus pluss"></i>
-                      <p className='product-qty'>
+                      <p className='product-qty'>  
                       {product.Product_qty}
                       </p>
                       <i className="fa-solid fa-minus minuss"></i>
+                      <p className='cart-product-price'>Rs : {product.Product_price}</p>
                       </div>
-                      <button className='btn'>Rs : {product.Product_price}</button>
                     </div>
                   </div>
                 ))
@@ -71,6 +72,7 @@ export const Cart = () => {
               <hr />
             </div>
             </div>
+            <button className='place-order-btn'>Place Order</button>
           </>
         }
       </div>

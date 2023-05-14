@@ -2,7 +2,8 @@ import './App.css';
 import { Navbar } from './Navbar/Navbar';
 import { BrowserRouter as Router, Switch, Route, } from "react-router-dom";
 import { Home } from './components/home/Home';
-import { Support } from './components/support/support';
+import Support from './components/support/support';
+
 import { Cart } from './components/cart/cart';
 import Register from './components/login&Register/register';
 import Login from './components/login&Register/login';

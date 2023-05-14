@@ -60,3 +60,11 @@
     border-color: darkgray;
     border-style: solid;
   }
+  .search_btn{
+    width:5%;
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+  }

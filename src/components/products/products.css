@@ -67,7 +67,7 @@
     font-size: 15px;
     color: red;
 }
-.product button{
+.content .btn{
     background-color: red;
     color: black;
     border-radius: 20px;
@@ -75,5 +75,6 @@
     margin-left: 45%;
     cursor: pointer;
     font-size: 20px;
+    min-width: 25%;
 
 }

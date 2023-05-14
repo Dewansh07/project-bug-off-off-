@@ -61,7 +61,7 @@ export const Products = () => {
                     <div className='product-desc'>{currentProduct.desc}</div>
                     <div className='company'>{currentProduct.Product_company}</div>
                   </div>
-                <button onClick={()=>{addPlan(currentProduct)}}>Add plan</button>
+                <button onClick={()=>{addPlan(currentProduct)}}>Add to cart</button>
               </div>
         </div>
       </div>
@@ -76,7 +76,7 @@ export const Products = () => {
                     {/* <div className='plan-desc'>{plan.desc}</div> */}
                     <div className='company'>{product.Product_company}</div>
                   </div>
-                <button className='btn' onClick={()=>{addPlan(product)}}>Add plan</button>
+                  <button className='btn' onClick={()=>{addPlan(product)}}>Add to cart</button>
               </div>
             </div>
           ))

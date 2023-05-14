@@ -54,7 +54,6 @@ export const Home = () => {
     speed: 700,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true,
     autoplaySpeed: 3000,
     beforeChange: (current, next) => setCurrentIndex(next),
   };

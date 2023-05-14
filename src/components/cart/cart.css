@@ -1,21 +1,93 @@
-.carttt{
+.carttt {
   display: flex;
   margin-right: 5%;
 }
-.checkout{
+
+.cart-head {
+  margin: 3% 3% 0 3%;
+}
+
+.checkout {
   width: 500px;
   font-weight: bold;
   font-size: 20px;
   text-align: right;
-  /* box-shadow: 0px 0px 2px 2px #cecece; */
-  /* height: 120px; */
 }
-.pluss,.minuss{
+
+.pluss,
+.minuss {
   color: black;
-  margin: 5px ;
+  margin: 5px;
+  border: 1px solid grey;
+  padding: 1%;
   cursor: pointer;
 }
-.product-qty{
+
+.cart-product-price{
+  margin-top: 2px;
+}
+
+.product-qty {
   color: black;
   display: inline;
+  font-size: 20px;
+  margin: 0 1px;
+}
+
+.product-cart {
+  background-color: white;
+  width: 25%;
+  height: fit-content;
+  margin-left: 3%;
+  padding: 2%;
+  margin-top: 2%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  color: aliceblue;
+  color: black;
+  font-weight: bold;
+}
+
+.product-cart img {
+  width: 75%;
+  margin-left: 15%;
+  height: 80%;
+  justify-self: center;
+  margin-right: 2%;
+}
+
+.product-cart .content {
+  width: 80%;
+  margin-right: 2%;
+  justify-self: center;
+  text-justify: center;
+  display: flex;
+}
+.cart-details{
+  width: 150px;
+}
+
+.product-cart .content .plan-name {
+  font-size: 25px;
+}
+
+.product-cart .content .plan-desc {
+  font-size: 15px;
+}
+
+.product-cart .content .trainer {
+  font-size: 15px;
+  color: red;
+}
+
+.place-order-btn {
+  background-color: #fb641b;
+  border: none;
+  font-size: 20px;
+  color: white;
+  padding: 1% 10%;
+  margin-left:13%;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }

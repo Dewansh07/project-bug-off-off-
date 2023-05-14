@@ -20,12 +20,12 @@
             justify-content: space-between;
     padding: 0 9%;
     z-index: 10000;
-    background: #000;
+    background:#fff;
   }
   
   .header .logo {
     font-weight: bolder;
-    color: #fff;
+    color: black;
     font-size: 2rem;
     text-decoration: none;
   }
@@ -39,7 +39,7 @@
     display: inline-block;
     padding: 1.2rem;
     font-size: 1.1rem;
-    color: #fff;
+    color: black;
   }
   
   .header .navbar a:hover {
@@ -51,4 +51,12 @@
     color: #fff;
     cursor: pointer;
     display: none;
+  }
+  .search{
+    width: 50%;
+    height: 80%;
+    padding: 1%;
+    border-radius: 15px;
+    border-color: darkgray;
+    border-style: solid;
   }

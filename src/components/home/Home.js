@@ -3,12 +3,12 @@ import './Home.css';
 import { Carousel } from 'react-bootstrap';
 import React, { useState, useRef, useEffect } from 'react';
 
-import gymImage1 from '../images/gym1.jpg';
-import gymImage2 from '../images/gym2.jpg';
-import gymImage3 from '../images/gym3.jpg';
-import gymImage4 from '../images/gym4.jpg';
-import gymImage5 from '../images/gym5.jpg';
-import gymImage6 from '../images/gym6.jpg';
+import Image1 from '../images/I1.jpg';
+import Image2 from '../images/I2.jpg';
+import Image3 from '../images/I3.jpg';
+import Image4 from '../images/I4.webp';
+import Image5 from '../images/I5.webp';
+import Image6 from '../images/I6.jpg';
 
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -40,12 +40,12 @@ export const Home = () => {
   }, [currentIndex]);
 
   const images = [
-    { src: gymImage1 },
-    { src: gymImage2 },
-    { src: gymImage3 },
-    { src: gymImage4 },
-    { src: gymImage5 },
-    { src: gymImage6 },
+    { src: Image1 },
+    { src: Image2 },
+    { src: Image3 },
+    { src: Image4 },
+    { src: Image5 },
+    { src: Image6 },
   ];
 
   const settings = {
@@ -63,7 +63,6 @@ export const Home = () => {
   return (
     <div className='home'>
       <Navbar/>
-      <h1>Home</h1>
       <div className="carousel-container">
 
       {/* Here the carousal must show the given images in a slideshow manner you can use any method to complete the effect  */}
@@ -79,12 +78,10 @@ export const Home = () => {
       
       <br></br>
       <div className='content'>
-          <h3>Gym, short for gymnasium, is a space designed for physical exercise and fitness activities. It typically contains a range of equipment such as weights, treadmills, stationary bikes, and resistance machines, as well as open space for activities such as stretching, yoga, and group fitness classes. Gyms are popular for individuals looking to improve their health and fitness levels, as well as for athletes and bodybuilders who use weight training and cardio exercises to build muscle and improve their physical performance.
-
-              Going to the gym can have a variety of benefits beyond just physical fitness, such as reducing stress, improving mood, and promoting better sleep. It can also provide an opportunity for social interaction and community-building, as many gyms offer group fitness classes and other activities that can help people connect with others who share similar fitness goals and interests.
-
-              However, it's important to note that gym memberships and equipment can be expensive, and not everyone has access to a gym or feels comfortable in that environment. Luckily, there are many other ways to stay active and achieve fitness goals, such as outdoor activities, home workouts, and other forms of physical exercise. Overall, while gyms can be a great resource for many people, it's important to find a fitness routine that works best for your individual needs and lifestyle.
+          <h3>
+              Welcome to our online clothing store! We offer a wide range of high-quality and fashionable clothing for men, women, and children. Our collection includes the latest trends and styles from top brands at affordable prices. Whether you're looking for casual wear, formal attire, or accessories to complete your outfit, we have everything you need to look your best. Shop now and experience the convenience of online shopping with fast and reliable delivery.
           </h3>
+          <button className='btn'>Explore</button>
       </div>
     </div>
     

@@ -1,5 +1,5 @@
 .home{
-  background-color: black;
+  background-color: white;
   
 }
 
@@ -7,7 +7,6 @@
   overflow: hidden;
 }
 .content{
-  background-color: red;
   width: 90%;
   padding: 2%;
   margin-top: 5%;
@@ -18,6 +17,17 @@
 .inner {
   white-space: nowrap;
   transition: transform 0.3s;
+}
+.btn{
+  padding: 1%;
+  font-size: 25px;
+  align-self: center;
+  background-color: red;
+  border-style: solid;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-left: 45%;
+  width: 10%;
 }
 
 .carousel-item {
@@ -47,6 +57,7 @@
   max-width: 700px;
   margin: 0 auto;
   display: relative;
+  margin-top: 5%;
 }
 
 .card {

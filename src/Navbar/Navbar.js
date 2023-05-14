@@ -19,7 +19,7 @@ export const Navbar = () => {
     const [vis,setVis] = useState('hidden')
 
     const HandleSearch = async ()=>{
-        const q1 = query(userRef, where("product_name", "==", search))
+        const q1 = query(productsRef, where("product_name", "==", search))
         const temp1 = []
         const querySnapShot1 = await getDocs(q1)
         try {

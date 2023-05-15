@@ -12,8 +12,8 @@ Hey contestant we welcome you to our event BugOff!!! here are some basic instruc
     This is website which Aims to provide its users with several workout plans. All the plans that the website offers provided by the different trainers should be  available on the pricing. We expect you to create a collection within firebase consisting of the attributes given within the 'plans' state inside the prices.js file
     and fetch these plans and display it accordingly
 
-    Hence when the user clicks on the add plan button it must be added to the user plans list within the user collection that was generated during the registration process
-    You must also try and incorporate the ability to delete these plans and add other features upon this basic functionality of the website
+   Hence when the user clicks on the add plan button it must be added to the user CART within the user collection that was generated during the registration process
+   You must also try and incorporate the ability to delete ITEMS from the cart and add other features upon this basic functionality of the website
 
 5)You can incorporate other features and Alter the UI to make it aesthetically pleasing but we expect the website to have as less console,UI errors etc.. as possible
 
